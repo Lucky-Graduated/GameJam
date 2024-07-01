@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/crooked-27811.mp3-f72338446f08f68523345312a84bc23c.mp3str"
+
+[deps]
+
+source_file="res://start-assets/crooked-27811.mp3"
+dest_files=[ "res://.import/crooked-27811.mp3-f72338446f08f68523345312a84bc23c.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://start-assets/Home.png" type="Texture" id=1]
+[ext_resource path="res://world/Home.gd" type="Script" id=2]
+
+[node name="Home" type="Button"]
+icon = ExtResource( 1 )
+flat = true
+script = ExtResource( 2 )
+
+[connection signal="pressed" from="." to="." method="_on_Home_pressed"]

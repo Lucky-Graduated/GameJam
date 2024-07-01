@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/pixel-coin-collect-197952.mp3-49d87a7223b9beb07ed213d3ace1e281.mp3str"
+
+[deps]
+
+source_file="res://start-assets/pixel-coin-collect-197952.mp3"
+dest_files=[ "res://.import/pixel-coin-collect-197952.mp3-49d87a7223b9beb07ed213d3ace1e281.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

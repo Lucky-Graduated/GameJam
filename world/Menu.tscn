@@ -1,0 +1,109 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://start-assets/background.png" type="Texture" id=1]
+[ext_resource path="res://start-assets/Play.png" type="Texture" id=2]
+[ext_resource path="res://world/Menu.gd" type="Script" id=3]
+[ext_resource path="res://world/World.tscn" type="PackedScene" id=4]
+[ext_resource path="res://start-assets/MINDLEAP.png" type="Texture" id=5]
+[ext_resource path="res://start-assets/level.png" type="Texture" id=6]
+[ext_resource path="res://start-assets/montserrat_extrabold.otf" type="DynamicFontData" id=7]
+[ext_resource path="res://start-assets/Sounds/Backgroundmain.wav" type="AudioStream" id=8]
+[ext_resource path="res://start-assets/player.png" type="Texture" id=9]
+[ext_resource path="res://start-assets/tileset.png" type="Texture" id=10]
+[ext_resource path="res://start-assets/coin.png" type="Texture" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 7 )
+
+[node name="Menu" type="Node2D"]
+script = ExtResource( 3 )
+load_scene = ExtResource( 4 )
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( 473, 226 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Play" type="Button" parent="."]
+margin_left = 395.0
+margin_top = 250.0
+margin_right = 471.0
+margin_bottom = 272.0
+rect_scale = Vector2( 3, 3 )
+icon = ExtResource( 2 )
+flat = true
+
+[node name="Level" type="Button" parent="."]
+margin_left = 395.0
+margin_top = 319.0
+margin_right = 471.0
+margin_bottom = 272.0
+rect_scale = Vector2( 3, 3 )
+icon = ExtResource( 6 )
+flat = true
+
+[node name="Player" type="Sprite" parent="."]
+position = Vector2( 848.5, 346 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="Player2" type="Sprite" parent="."]
+position = Vector2( 592, 138 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 9 )
+
+[node name="Coin" type="Sprite" parent="."]
+position = Vector2( 852.5, 384 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 11 )
+
+[node name="Coin2" type="Sprite" parent="."]
+position = Vector2( 347, 54 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 11 )
+
+[node name="Coin3" type="Sprite" parent="."]
+position = Vector2( 522, 237 )
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 11 )
+
+[node name="Tileset" type="Sprite" parent="."]
+position = Vector2( 844.5, 420 )
+texture = ExtResource( 10 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 143.644, 18.1634 )
+
+[node name="Mindleap" type="Sprite" parent="."]
+position = Vector2( 606, 118 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 178.0
+margin_top = 565.0
+margin_right = 912.0
+margin_bottom = 586.0
+custom_fonts/font = SubResource( 1 )
+text = "*YOU WILL BE GIVEN 2 MIN TO COMPLETE ONE LEVEL SO TRY TO COMPLETE IN 2 MIN."
+
+[node name="KeyBindings" type="Label" parent="."]
+margin_left = 690.0
+margin_top = 289.0
+margin_right = 937.0
+margin_bottom = 334.0
+custom_fonts/font = SubResource( 1 )
+text = "SHITF + WAD-> SPRINT/RUN
+
+WAD-> MOVE"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+autoplay = true
+
+[connection signal="pressed" from="Play" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Level" to="." method="_on_Level_pressed"]
